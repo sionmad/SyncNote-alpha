@@ -9,22 +9,37 @@
   <body>
     <main class="container">
       <h1>Syncnote-alpha</h1>
-      <p class="subtitle">Turn meeting notes into summaries, action items, and email drafts.</p>
+      <p id="subtitle" class="subtitle">Turn meeting notes into summaries, action items, and email drafts.</p>
 
       <section class="card">
-        <label for="notesInput">Meeting Notes</label>
+        <div class="control-row">
+          <label for="languageSelect" id="languageLabel">Output Language</label>
+          <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="ja">日本語 (Japanese)</option>
+            <option value="zh">中文 (Chinese)</option>
+            <option value="ko">한국어 (Korean)</option>
+            <option value="es">Español (Spanish)</option>
+            <option value="fr">Français (French)</option>
+            <option value="ar">العربية (Arabic)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="ru">Русский (Russian)</option>
+          </select>
+        </div>
+
+        <label id="notesLabel" for="notesInput">Meeting Notes</label>
         <textarea id="notesInput" placeholder="Paste your meeting notes here..."></textarea>
         <button id="analyzeBtn">Analyze Notes</button>
       </section>
 
       <section id="output" class="card hidden">
-        <h2>Summary</h2>
+        <h2 id="summaryTitle">Summary</h2>
         <p id="summaryText"></p>
 
-        <h2>Action Items</h2>
+        <h2 id="actionItemsTitle">Action Items</h2>
         <ul id="actionItems"></ul>
 
-        <h2>Email Draft</h2>
+        <h2 id="emailDraftTitle">Email Draft</h2>
         <pre id="emailDraft"></pre>
       </section>
 
