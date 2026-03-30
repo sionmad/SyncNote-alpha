@@ -1,0 +1,26 @@
+{
+  "name": "syncnote-alpha",
+  "version": "1.0.0",
+  "description": "AI-powered web app that converts meeting notes into summaries, action items, and email drafts.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "keywords": [
+    "openai",
+    "meeting-notes",
+    "productivity",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
